@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom'
+import Home from './Home'
 import Category from './Category'
 import SearchResults from './SearchResults'
 import MealDetails from './MealDetails'
