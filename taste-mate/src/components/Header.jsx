@@ -4,7 +4,7 @@ export default function Header () {
     return (
         <div>
             <header>
-            <SearchBar/>
+            {/* <SearchBar/> */}
             <h1>Taste-Mate</h1>
             <Nav/>
             </header>
