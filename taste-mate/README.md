@@ -1,4 +1,4 @@
-# React + Vite
+# Taste Mate
 
 ## React Hackathon Group Project (with Axios API)
 ### Team:
