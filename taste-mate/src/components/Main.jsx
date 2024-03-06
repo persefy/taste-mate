@@ -32,7 +32,8 @@ export default function Main () {
                 <Route exact path='/category/:category' element={<Category/>}/>
                 
                 <Route path='searchResults/:name' element={<SearchResults/>}/>
-                <Route path='meal/:id' element={<MealDetails/>}/>
+                {/* <Route path='meal/:id' element={<MealDetails/>}/> */}
+                <Route path=':category/:id' element={<MealDetails/>}/>
             </Routes>
         </div>
     )
