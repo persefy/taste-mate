@@ -5,7 +5,7 @@ export default function Nav () {
         <div>
         <Link to="/">Home</Link>
         <Link to="/category/:name">Category</Link>
-        <Link to="searchResults/:name">Search</Link>
+        <Link to="/searchResults/:name">Search</Link>
 
         
         </div>
