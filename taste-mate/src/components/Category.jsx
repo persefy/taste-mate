@@ -11,6 +11,8 @@ export default function Category(props) {
     const [meals, setMeals] = useState([])
 
     const [displayCategory,setDisplayCategory] = useState(category)
+
+    console.log(displayCategory)
     useEffect(() => {
         console.log(category)
 
@@ -19,6 +21,7 @@ export default function Category(props) {
         const getMeals = async () => {
             try {
                 const response = await axios.get(`${BASE_URL}filter.php?c=${displayCategory}`)
+                setDisplayCategory(category)
                 setMeals(response.data.meals)
                 console.log(meals)
             } catch (error) {
@@ -29,14 +32,15 @@ export default function Category(props) {
         console.log(meals)
     },[category])
 
-    return (
-        <div>
-            <h1>Category</h1>
-            <ul>
-                {meals.map((meal, index) => (
-                    <li key={index}>{meal.strMeal}</li>
-                ))}
-            </ul>
-        </div>
-    )
-}
+
+        return (
+            <div>
+                <h1>Category</h1>
+                <ul>
+                    {meals.map((meal, index) => (
+                        <li key={index}>{meal.strMeal}</li>
+                    ))}
+                </ul>
+            </div>
+        )
+    }
