@@ -1,7 +1,8 @@
-export default function CategoryResults () {
+export default function Category() {
     return (
 
-        <div></div>
+        <h1>Category</h1>
 
+        <div></div>
     )
 }
