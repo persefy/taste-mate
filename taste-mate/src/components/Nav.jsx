@@ -13,25 +13,19 @@ export default function Nav () {
     useEffect(() => {
         const getCategories = async () => {
             const response = await axios.get(`${BASE_URL}categories.php`)
-            console.log(response.data.categories)
+            //console.log(response.data.categories)
+
+            setCategories(response.data.categories)
         }
       
         getCategories()
       }, [])
+      console.log(categories)
     return (
         <div>
-
-        {/* // <Link to="/">Home</Link>
-        // <div className="hamburger">&#9776;</div>
-        // <div className="categories"></div> */}
-
-        {/* sidebar code  */}
-        {/* <h2>Categories</h2>
-        <p>Meat</p>
-        <p>Meal Type</p>
-        <p>Vegetarian</p>
-        <p>Other</p>
-        <Link to="/category/Beef">Beef</Link> */}
+            {categories.map((category) => (
+                <Link to={`/category/${category.strCategory}`}>{category.strCategory}</Link>
+            ) )}
         
         
         <Link to="/">Home</Link>

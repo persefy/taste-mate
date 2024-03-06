@@ -5,6 +5,7 @@ import DataContext  from "../DataContext";
 import '../App.css'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import { BASE_URL } from '../globals'
 
 export default function SearchBar () {
     const { searchMealQuery, setSearchMealQuery } = useContext(DataContext);
@@ -16,22 +17,35 @@ export default function SearchBar () {
 
     const [formState, setFormState] = useState(initialState);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault()
         //doing something with data
         
+        
+        console.log(searchQuery.value)
+        //const response = await axios.get(`${BASE_URL}search.php?s=${searchMealQueryStr}`)
+    
+        const response = await axios.get(`${BASE_URL}search.php?s=${searchQuery.value}`)
+        //const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=beef`)
+        
+        console.log(response.data.meals)
+        
+        
+
+
         console.log(formState, searchMealQuery)
         
         //reverting to our initial state
+        
         navigate('/searchResults/:name')
         setFormState(initialState)
+
     }
 
     const handleChange = (event) => {
         setFormState({...formState, [event.target.id]: event.target.value})
     }
     //form code above
-
 
     return (
         <div>

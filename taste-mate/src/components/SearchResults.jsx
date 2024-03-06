@@ -1,18 +1,24 @@
-import SearchBar from "./SearchBar"
-import { useNavigate } from "react-router-dom"
 import axios from "axios"
+import SearchBar from "./SearchBar"
 import DataContext from "../DataContext"
-import { useEffect, useContext } from 'react'
+import { useEffect, useContext, useState } from 'react'
 import { BASE_URL } from '../globals'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 export default function SearchResults () {
 
     const { searchMealQuery, setSearchMealQuery } = useContext(DataContext);
     // let { name } = useParams()
+    // let searchMealQueryStr = 'chicken'
+    const[searchQuery,setSearchQuery]=useState(searchMealQuery)
+
+
     useEffect(() => {
         const getMealResults = async ()  => {
-            const response = await axios.get(`${BASE_URL}/search.php?s=${searchMealQuery}`)
+            console.log(searchQuery)
+            //const response = await axios.get(`${BASE_URL}search.php?s=${searchMealQueryStr}`)
+        
+            const response = await axios.get(`${BASE_URL}search.php?s=${searchQuery}`)
             //const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=beef`)
             
             console.log(response.data.meals)
@@ -22,7 +28,7 @@ export default function SearchResults () {
 
     return (
         <div>
-            {searchMealQuery}
+            {searchQuery}
         </div>
     )
 }
