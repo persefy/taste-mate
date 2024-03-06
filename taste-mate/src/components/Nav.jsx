@@ -20,17 +20,16 @@ export default function Nav () {
       
         getCategories()
       }, [])
-      console.log(categories)
     return (
         <div>
             {categories.map((category) => (
-                <Link to={`/category/${category.strCategory}`}>{category.strCategory}</Link>
+                <Link to={`/category/${category.strCategory}`}key={category.strCategory}>{category.strCategory} </Link>
             ) )}
         
         
         <Link to="/">Home</Link>
-        <Link to="/category/:name">Category</Link>
-        <Link to="/searchResults/:name">Search</Link>
+
+        
 
         
         </div>
