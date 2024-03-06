@@ -1,17 +1,18 @@
 import { useState } from 'react'
-import axios from 'axios'
-
+import DataContext  from "./DataContext"
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
 function App() {
-  
+  const [searchMealQuery, setSearchMealQuery] = useState('')
 
   return (
     <>
-      <Header/>
-      <Main/>
+      <DataContext.Provider value={{searchMealQuery, setSearchMealQuery}}>
+        <Header/>
+        <Main/>
+      </DataContext.Provider>
       <Footer/>
     </>
   )

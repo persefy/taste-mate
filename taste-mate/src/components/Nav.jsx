@@ -20,6 +20,7 @@ export default function Nav () {
       }, [])
     return (
         <div>
+
         {/* // <Link to="/">Home</Link>
         // <div className="hamburger">&#9776;</div>
         // <div className="categories"></div> */}
@@ -33,6 +34,9 @@ export default function Nav () {
         <Link to="/category/Beef">Beef</Link> */}
         
         
+        <Link to="/">Home</Link>
+        <Link to="/category/:name">Category</Link>
+        <Link to="/searchResults/:name">Search</Link>
 
         
         </div>
