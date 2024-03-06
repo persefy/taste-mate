@@ -28,7 +28,7 @@ export default function SearchResults () {
 
     return (
         <div>
-            {searchQuery}
+            <h4>Results for {searchQuery}</h4>
         </div>
     )
 }

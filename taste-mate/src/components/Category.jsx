@@ -34,19 +34,25 @@ export default function Category(props) {
 
     let navigate=useNavigate()
 
-    const showMeal = (meal) => {
-      navigate(`${meal.id}`)
-      console.log(meal.id)
+    const showMeal = (key) => {
+      navigate(`${key}`)
+      console.log(key)
     }
 
-        return (
-            <div>
-                <h1>Category</h1>
-                <ul>
-                    {meals.map((meal, index) => (
-                        <li key={meal.id} onClick={() => showMeal(meal)}>{meal.strMeal}</li>
-                    ))}
-                </ul>
-            </div>
-        )
-    }
+    
+    return (
+        <div>
+            <h1>Category</h1>
+            <ul>
+                {meals.map((meal, key) => (
+                 
+                        <div key={key} className="card" onClick={() => showMeal(parseInt(meal.idMeal))}>
+                            <h3>{meal.strMeal}</h3>
+                            <img src={meal.strMealThumb} alt={meal.strMeal}></img>
+                        </div>
+                  
+                ))}
+            </ul>
+        </div>
+    )
+}

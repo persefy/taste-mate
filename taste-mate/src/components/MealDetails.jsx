@@ -1,6 +1,7 @@
 import { useEffect, useState} from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from "axios"
+import { BASE_URL } from '../globals'
 
 const MealDetails = () => {
 
@@ -11,9 +12,9 @@ const MealDetails = () => {
 
     useEffect(() => {
         const getMeal = async() => {
-            const response = await axios.get(`www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
-            setMeal(response.data)
-            console.log(response.data)
+            const response = await axios.get(`${BASE_URL}lookup.php?i=${id}`)
+            setMeal(response.data.meals[0])
+            console.log(response.data.meals[0])
         }
         getMeal()
     }, [id])
@@ -28,8 +29,8 @@ const MealDetails = () => {
                 <div className="meal-details-body">
                     <div className="ingredients-container">
                         <h2>Ingredients</h2>
-                        <div classname="ingredients-list">
-                            {Object.keys(meal).map(key => {
+                        <div className="ingredients-list">
+                            {/* {Object.keys(meal).map(key => {
                                 if (key.startsWith('strIngredient') && meal[key]) {
                                     const measureKey = `strMeasure${key.slice(13)}`
                                     return (
@@ -40,15 +41,15 @@ const MealDetails = () => {
                                     )
                                 }
                                 return null
-                            })}
+                            })} */}
                         </div>
                     </div>
                     <div className="instructions">
                         <h2>Instructions</h2>
                         <ul className="instruction-list">
-                            {meal.strInstructions.split('\r\n').map((step, index) => (
+                            {/* {meal.strInstructions.split('\r\n').map((step, index) => (
                                 <li key={index}>{step}</li>
-                            ))}
+                            ))} */}
                         </ul>
                     </div>
                     <div className="video"></div>
