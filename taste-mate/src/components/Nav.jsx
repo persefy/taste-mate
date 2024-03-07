@@ -21,6 +21,7 @@ export default function Nav () {
         getCategories()
       }, [])
 
+
       // Function to handle hover event on "Recipes" category
     const handleRecipesHover = () => {
         setSelectedCategory("Recipes")
