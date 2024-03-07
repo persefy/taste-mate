@@ -11,9 +11,6 @@ import MealDetails from './MealDetails'
 
 export default function Main () {
 
-    
-
-
     return (
         <div className="Main">
             <Routes>
