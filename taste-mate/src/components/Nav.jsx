@@ -25,8 +25,6 @@ export default function Nav () {
             {categories.map((category) => (
                 <Link to={`/category/${category.strCategory}`}key={category.strCategory}>{category.strCategory} </Link>
             ) )}
-        
-        
         <Link to="/">Home</Link>
 
         
