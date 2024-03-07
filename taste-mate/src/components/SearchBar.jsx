@@ -43,16 +43,16 @@ export default function SearchBar () {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" id="searchQuery"
+                <input placeholder="What are we cookin?" type="text" id="searchQuery"
                         onChange={handleChange}
                         value={formState.searchQuery}/>
-                <button type="submit" onClick={()=> {
+
+                <button  className="search-button" type="submit" onClick={()=> {
                         if (formState.searchQuery!='') {
                             setSearchMealQuery(formState.searchQuery)
                         } else {
                             console.log('Please enter search query to use this feature')
-                        }
-                }}>Search</button>
+                        }}}>Search</button>
             </form>
         </div>
     )

@@ -8,13 +8,13 @@ function App() {
   const [searchMealQuery, setSearchMealQuery] = useState('')
 
   return (
-    <>
+    <div className="App">
       <DataContext.Provider value={{searchMealQuery, setSearchMealQuery}}>
         <Header/>
         <Main/>
       </DataContext.Provider>
       <Footer/>
-    </>
+    </div>
   )
 }
 
