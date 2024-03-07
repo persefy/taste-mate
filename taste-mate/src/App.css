@@ -264,7 +264,7 @@ body {
   font-size: 1.1rem;
   padding: 5px;
 }
-.github-links a:hover, .Footer p a:hover {
+.github-links a:hover, .Footer p a:hover, .Footer .link-credit a:hover {
   color: #e33d26;
 }
 .github-links a img {
@@ -286,6 +286,14 @@ body {
   width: 60%;
   margin: 30px auto 0;
   text-align: center;
+}
+.Footer .link-credit, .Footer .link-credit a {
+  border: none;
+  padding: 10px 0;
+  color: #ddd;
+}
+.Footer .link-credit {
+  display: block;
 }
 @media screen and (min-width:600px) {
   .github-links {

@@ -12,7 +12,8 @@ export default function Footer () {
                 <p>
                 <a href="https://github.com/persefy/taste-mate" target="_blank">Taste Mate </a>
                 <span className="copy"> &copy; 2024</span>
-                
+                <a target="_blank" href="https://icons8.com/icon/kM3jSWUyHfbd/taco">Taco</a> 
+                <span className="link-credit">favicon by <a target="_blank" href="https://icons8.com">Icons8</a></span>
                 </p>
             </div>
         </footer>
