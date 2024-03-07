@@ -12,17 +12,6 @@ import MealDetails from './MealDetails'
 export default function Main () {
 
     
-//     const [categories, setCategories] = useState([])
-//     const [selectedCategoty, setSelectedCategory] = useState(null)
-//   // this should be a single movie object once you've select one
-
-//   useEffect (() => {
-//     const getCategories = async () => {
-//       const response = await axios.get(`${BASE_URL}categories.php`)
-//       setCategories(response.data)
-//     }
-//     getMovies()
-//   }, [])
 
 
     return (
