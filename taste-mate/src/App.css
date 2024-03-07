@@ -1,7 +1,9 @@
 body {
   margin: 0;
+  position: relative;
 }
 .App {
+  
   font-family:  Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -20,7 +22,14 @@ body {
   width: 100vw;
   height: 120px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  left: 0;
+  background-color: white;
  
+}
+
+.Main {
+  margin-top: 120px;
 }
 
     .name-searchbar-container {
@@ -143,6 +152,7 @@ body {
     .category-container {
       display: flex;
       flex-direction: column;
+     
     }
 
     .category-container h1 {
@@ -264,19 +274,20 @@ body {
   align-items: center; 
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
   width: 100vw;
-  position: absolute;
-  bottom: 0;
-  padding: 50px 0 50px;
+  padding: 10px 0px 20px;
   background: linear-gradient(#eee,white, white)
 }
 .Footer h3 {
   color: #2e2a2a;
+  padding: 5px 80px;
+  text-align: center;
+  margin: 0;
 }
 .github-links {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 .github-links a {
   display: inline-block;
@@ -301,9 +312,9 @@ body {
 }
 .copy-border p {
   border-top: solid 1px #ddd;
-  padding: 30px 0 0;
+  padding: 20px 0 0;
   width: 60%;
-  margin: 30px auto 0;
+  margin: 0px auto 0;
   text-align: center;
 }
 .Footer .link-credit, .Footer .link-credit a {
@@ -399,6 +410,18 @@ body {
   .submenu-row {
     width: 25vw;
   }
+  .meal-details-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ingredients-container {
+    width: 100%;
+  }
+  .instructions-container {
+    width: 100%;
+    margin-left: 0px;
+  }
  
 }
 
@@ -416,7 +439,6 @@ body {
     justify-content: space-between;
     align-items: center; 
     width: 100%;
-    
   }
  
   .bookmark-icon{
@@ -427,12 +449,12 @@ body {
   }
   .category-container {
     width: 85vw;
+    margin: 0 auto;
   }
   .saved-recipes-text {
     display: none;
   }
  
-
   #searchQuery {
     width: 60vw;
   }
@@ -443,5 +465,35 @@ body {
   }
   .submenu-row {
     width: 25vw;
+  }
+
+  .meal-details-body {
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  .ingredients-container {
+    width: 100%;
+  }
+  .instructions-container {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .App {
+    width: 90vw;
+  }
+  .Main{
+    width: 90vw;
+    margin: 20px auto 0;
+    margin-top: 120px;
+  }
+  .meal-details-container{
+    width: 100%;
+  }
+
+  .meal-details-image{
+    width: 100%;
   }
 }
