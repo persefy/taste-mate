@@ -37,6 +37,15 @@ body {
       font-weight: 700;
       font-size: 2.2em;
     }
+
+    .header-row2 {
+      display:flex;
+      flex-direction: row;
+    }
+
+    .search-bar-container{
+      padding-right: 10px;
+     }
     #searchQuery {
       box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
       height: 25px;
@@ -74,7 +83,8 @@ body {
       width: 25px;
     }
     .saved-recipes-text{
-      padding-left: 10px;
+      padding-left: 0;
+      padding-right: 10px;
     }
 
     .nav-menu{
@@ -140,6 +150,11 @@ body {
      padding:10px;
     }
 
+    .category-container h4 {
+      text-align: center;
+      padding:10px;
+     }
+
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -184,7 +199,6 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
- 
 }
 
 .meal-details-image {
@@ -252,4 +266,122 @@ body {
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 10px;
+}
+
+.scroll-top-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.scroll-top-button {
+  border: none;
+  color: white;
+  font-weight: 700;
+  background-color: #e33d26;
+  height: 25px;
+  border-radius: 5px;
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+  .category-container {
+    width: 85vw;
+  }
+  .saved-recipes-text {
+    display: none;
+  }
+  .search-bar-container{
+    padding-right: 20px;
+   }
+  .bookmark-icon {
+    padding-right: 10px;
+  }
+  .submenu {
+    width: 50vw;
+  }
+}
+
+
+@media (min-width: 501px) and (max-width: 700px) {
+  .category-container {
+    width: 85vw;
+  }
+  .saved-recipes-text {
+    display: none;
+  }
+  .name-searchbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+   
+  }
+  .header-row2 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+  }
+  
+  .bookmark-icon{
+    padding-left: 20px;
+  }
+    
+  #searchQuery {
+    width: 50vw;
+  }
+  .submenu {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20w;
+  }
+  .submenu-row {
+    width: 25vw;
+  }
+ 
+}
+
+@media (max-width: 500px) {
+  .name-searchbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 85vw;
+  }
+  .header-row2 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    
+  }
+ 
+  .bookmark-icon{
+    padding-left: 30px;
+  }
+  #searchQuery {
+    width: 40vw;
+  }
+  .category-container {
+    width: 85vw;
+  }
+  .saved-recipes-text {
+    display: none;
+  }
+ 
+
+  #searchQuery {
+    width: 60vw;
+  }
+  .submenu {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20w;
+  }
+  .submenu-row {
+    width: 25vw;
+  }
 }
