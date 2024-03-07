@@ -19,6 +19,13 @@ const MealDetails = () => {
         getMeal()
     }, [id])
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        })
+    }
+
     return meal ? (
         <div>
             <div className="meal-details-container">
@@ -69,6 +76,11 @@ const MealDetails = () => {
                         allowFullScreen
                     ></iframe>
                 </div>
+            </div>
+            <div className='scroll-top-container'>
+                <button className="scroll-top-button" onClick={scrollToTop}>
+                    Scroll back to top
+                </button>
             </div>
         </div>
         ) : null

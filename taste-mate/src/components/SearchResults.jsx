@@ -34,17 +34,16 @@ export default function SearchResults () {
     }
     //also add code for when 0 items are returned
     return (
-        <div>
+        <div className="category-container">
             <h4>Results for {searchMealQuery}</h4>
-            <ul>
+            <div className="card-container">
                 {meals.map((meal, key) => (
-                 
-                        <div key={key} className="card" onClick={() => showMeal(parseInt(meal.idMeal))}>
-                            <h3>{meal.strMeal}</h3>
-                            <img src={meal.strMealThumb} alt={meal.strMeal}></img>
-                        </div>
+                    <div key={key} className="card" onClick={() => showMeal(parseInt(meal.idMeal))}>
+                        <img className="card-image" src={meal.strMealThumb} alt={meal.strMeal}></img>
+                        <h3 className="card-name">{meal.strMeal}</h3>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
