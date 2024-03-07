@@ -237,7 +237,7 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
+/* Footer code ----------------------------------------------- */
 .Footer {
   display: flex;
   flex-direction: column;
@@ -245,11 +245,56 @@ body {
   align-items: center; 
   box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
   width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding: 50px 0 50px;
+  background: linear-gradient(#eee,white, white)
 }
-
+.Footer h3 {
+  color: #2e2a2a;
+}
 .github-links {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   padding-bottom: 10px;
 }
+.github-links a {
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 5px;
+}
+.github-links a:hover, .Footer p a:hover {
+  color: #e33d26;
+}
+.github-links a img {
+  padding: 3px 4px 0 0;
+  margin-bottom: -5px;
+  width: 25px;  
+  height: 25px;
+}
+.Footer p a {
+  padding-right: 5px;
+  color: #343030;
+}
+.copy-border {
+  width: 100%;
+}
+.copy-border p {
+  border-top: solid 1px #ddd;
+  padding: 30px 0 0;
+  width: 60%;
+  margin: 30px auto 0;
+  text-align: center;
+}
+@media screen and (min-width:600px) {
+  .github-links {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+  }
+  .copy-border {
+    max-width: 700px;
+  }
+}
+/* Footer code END-------------------------------------------- */

@@ -9,14 +9,6 @@ export default function SearchResults () {
     const { searchMealQuery, setSearchMealQuery } = useContext(DataContext);
     const [meals, setMeals] = useState([])
 
-    // const getSearchResults = async () => {
-    //     console.log(searchQuery)
-    //     const response = await axios.get(`${BASE_URL}search.php?s=${searchQuery}`)
-    //     console.log(response.data.meals)
-    //     setSearchResults(response.data.meals)
-    //     console.log(searchResults)
-    // }
-    //----------------------------
     useEffect(() => {
         const getMealResults = async ()  => {
             try {
