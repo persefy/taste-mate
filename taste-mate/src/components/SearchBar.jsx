@@ -1,15 +1,16 @@
 import axios from "axios"
 import { useState, useContext } from 'react'
-//import { BASE_URL } from '../globals'
 import DataContext  from "../DataContext";
-import '../App.css'
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from '../globals'
+import '../App.css'
 
 export default function SearchBar () {
+    
     const { searchMealQuery, setSearchMealQuery } = useContext(DataContext);
+    
     let navigate = useNavigate()
+    
     //form code below
     const initialState = {
         searchQuery: '',
@@ -20,26 +21,18 @@ export default function SearchBar () {
     const handleSubmit = async (event) => {
         event.preventDefault()
         //doing something with data
-        
-        
-        console.log(searchQuery.value)
-        //const response = await axios.get(`${BASE_URL}search.php?s=${searchMealQueryStr}`)
     
-        const response = await axios.get(`${BASE_URL}search.php?s=${searchQuery.value}`)
-        //const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=beef`)
-        
-        console.log(response.data.meals)
-        
-        
+        const response = await axios.get(`${BASE_URL}search.php?s=${searchMealQuery}`)
 
-
+        //console.log(response.data.meals)
         console.log(formState, searchMealQuery)
-        
-        //reverting to our initial state
-        
-        navigate('/searchResults/:name')
-        setFormState(initialState)
 
+        //reverting to our initial state
+        setFormState(initialState)
+        
+        if (formState.searchQuery!='') {
+        navigate(`/searchResults/${searchMealQuery}`)
+        }
     }
 
     const handleChange = (event) => {
@@ -54,12 +47,14 @@ export default function SearchBar () {
                         onChange={handleChange}
                         value={formState.searchQuery}/>
                 <button type="submit" onClick={()=> {
-                    setSearchMealQuery(formState.searchQuery)
+                        if (formState.searchQuery!='') {
+                            setSearchMealQuery(formState.searchQuery)
+                        } else {
+                            console.log('Please enter search query to use this feature')
+                        }
                 }}>Search</button>
             </form>
         </div>
-
-
     )
 }
 
