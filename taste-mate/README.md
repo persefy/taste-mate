@@ -28,7 +28,7 @@ Languages/Tools:
 ![heirarchy](src/assets/hierarchy/ComponenteHierarchy.png)
 
 ## Figma Wireframes
-![figma](src/assets/figma/Figma_MacBook_1.png){:width="20px}
+![figma](src/assets/figma/Figma_MacBook_1.png)
 ![figma](src/assets/figma/Figma_MacBook_2.png)
 ![figma](src/assets/figma/Figma_MacBook_3.png)
 ![figma](src/assets/figma/Figma_MacBook_4.png)
