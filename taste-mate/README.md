@@ -25,20 +25,20 @@ Languages/Tools:
 - Axios
 
 ## Component Hierarchy
-![ERD](src/assets/hierarchy/ComponenteHierarchy.png)
+![heirarchy](src/assets/hierarchy/ComponenteHierarchy.png)
 
 ## Figma Wireframes
-![ERD](src/assets/figma/Figma_MacBook_1.png)
-![ERD](src/assets/figma/Figma_MacBook_2.png)
-![ERD](src/assets/figma/Figma_MacBook_3.png)
-![ERD](src/assets/figma/Figma_MacBook_4.png)
-![ERD](src/assets/figma/Figma_MacBook_5.png)
-![ERD](src/assets/figma/Figma_iPhone_1.png)
-![ERD](src/assets/figma/Figma_iPhone_2.png)
-![ERD](src/assets/figma/Figma_iPhone_3.png)
-![ERD](src/assets/figma/Figma_iPhone_4.png)
-![ERD](src/assets/figma/Figma_iPhone_5.png)
-![ERD](src/assets/figma/Figma_iPhone_6.png)
+![figma](src/assets/figma/Figma_MacBook_1.png)
+![figma](src/assets/figma/Figma_MacBook_2.png)
+![figma](src/assets/figma/Figma_MacBook_3.png)
+![figma](src/assets/figma/Figma_MacBook_4.png)
+![figma](src/assets/figma/Figma_MacBook_5.png)
+![figma](src/assets/figma/Figma_iPhone_1.png)
+![figma](src/assets/figma/Figma_iPhone_2.png)
+![figma](src/assets/figma/Figma_iPhone_3.png)
+![figma](src/assets/figma/Figma_iPhone_4.png)
+![figma](src/assets/figma/Figma_iPhone_5.png)
+![figma](src/assets/figma/Figma_iPhone_6.png)
 
 ### Team:
 - [Christian Adams](https://github.com/connorreidy1)
