@@ -40,7 +40,7 @@ export default function Home (props) {
     
     return (
       <div className="category-container">
-        <h1>Random Recipies</h1>
+        <h1>Suggested Recipes</h1>
           <div className="card-container">
               {randomMeals.map((meal) => (
                   <div key={meal.idMeal} className="card" onClick={() => showMeal({ strCategory: meal.strCategory, idMeal: parseInt(meal.idMeal) })}>
