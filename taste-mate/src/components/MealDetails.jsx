@@ -25,6 +25,11 @@ const MealDetails = () => {
                 <div className="meal-details-header">
                     <img className="meal-details-image" src={meal.strMealThumb}/>
                     <h1>{meal.strMeal}</h1>
+                    <div className="meal-subheader">
+                        <h3>Region: <strong>{meal.strArea}</strong></h3>
+                        <h3>Tags: <strong>{meal.strTags && meal.strTags.split(',').join(', ')}</strong></h3>
+                    </div>
+
                 </div>
                 <div className="meal-details-body">
                     <div className="ingredients-container">
@@ -52,7 +57,17 @@ const MealDetails = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="video"></div>
+                    
+                </div>
+                <div className="video">
+                    <iframe
+                        width="560"
+                        height="315"
+                        src={meal.strYoutube.replace("watch?v=", "embed/")}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
                 </div>
             </div>
         </div>

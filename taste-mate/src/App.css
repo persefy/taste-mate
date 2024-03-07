@@ -17,10 +17,12 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 1000vw;
+  width: 100vw;
   height: 120px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+ 
 }
+
     .name-searchbar-container {
       /* background-color: green; */
       display: flex;
@@ -38,14 +40,15 @@ body {
     #searchQuery {
       box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
       height: 25px;
-      width: 25vw;
+      width: 30vw;
       border: none;
       background-color: rgb(242, 242, 241);
       box-sizing: border-box;
+      padding-left: 10px;
     }
     #searchQuery::placeholder {
       font-size: 1.1em;
-      padding-left: 10px; 
+    
       transform: translateY(2px);
     }
     #searchQuery:hover{
@@ -58,7 +61,7 @@ body {
       border: none;
       height: 25px;
       border-radius: 5px;
-      margin-left: 10px;
+      margin-left: -50px;
       
     }
     .saved-recipes {
@@ -70,6 +73,10 @@ body {
     .bookmark-icon, .user-icon {
       width: 25px;
     }
+    .saved-recipes-text{
+      padding-left: 10px;
+    }
+
     .nav-menu{
       position: relative;
       display: flex;
@@ -91,7 +98,7 @@ body {
       padding-bottom: 14px;
     }
     .submenu {
-      margin-top: 14px;
+      margin-top: 13px;
       position: absolute;
       top: 100%;
       left: 50%;
@@ -103,9 +110,9 @@ body {
       width: 40vw;
       padding-left: 2vw;
       padding-right: 2vw;
-    
       border-radius: 5px;
       box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+      
     }
     .submenu-row{
       text-decoration: none;
@@ -121,17 +128,19 @@ body {
     .submenu-row h3 {
       font-size: 1em;
       font-weight: 400;
-  
     }
     
-
-
     .category-container {
+      display: flex;
+      flex-direction: column;
+    }
 
+    .category-container h1 {
+     text-align: center;
+     padding:10px;
     }
 
     .card-container {
-     
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -140,14 +149,13 @@ body {
     .card {
       display: flex;
       flex-direction: column;
-      
       width: 250px; 
       height: 250px;
       margin-bottom: 30px;
       margin-right: 10px;
       margin-left: 10px;
       border-radius: 5px;
-      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
       background-color: white;
     }
 
@@ -159,34 +167,89 @@ body {
     }
 
     .card-name {
-      flex: 1; /* Take up remaining space vertically */
-      display: flex; /* Use flexbox for centering */
-       /* Center horizontally */
-      /* Center vertically */
+      flex: 1; 
+      display: flex;
       font-size: 1.2em;
       font-weight: 700;
-     
       padding-left: 15px;
     }
 
-/* .meal-details-container {
-
+.meal-details-container {
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
-  
+  width: 70vw;
+}
 
-} */
-
-/* .meal-details-header {
+.meal-details-header {
   display: flex;
   flex-direction: column;
-  
+  text-align: center;
+ 
 }
 
 .meal-details-image {
-  width:100vw;
+  width:70vw;
   height: 35vh;
   object-fit: cover;
 } 
+
+.meal-subheader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  
+  
+}
+.meal-subheader h3 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.meal-details-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.ingredients-container {
+  border-top: 2px solid black;
+  width: 25vw;
+}
+
+.instructions-container {
+  border-top: 2px solid black;
+  width: 40vw;
+  margin-left: 60px;
+}
+
+.instruction-list h4, .ingredients-list h4 {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.video {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+  border-top: 2px solid black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.25);
+  width: 100vw;
+}
+
+.github-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
