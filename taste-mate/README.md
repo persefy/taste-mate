@@ -6,7 +6,7 @@
 - [Conner Reidy](https://github.com/Zekkune)
 - [Stephanie Cancel](https://github.com/persefy)
 
-Using []'TheMealDB' API](https://themealdb.com/api.php)
+Using ['TheMealDB' API](https://themealdb.com/api.php)
 
 ## Summary:
 Team of 3 created a React app, pulling data from an external API using axios.
