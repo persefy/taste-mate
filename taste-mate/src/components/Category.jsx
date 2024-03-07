@@ -41,18 +41,16 @@ export default function Category(props) {
 
     
     return (
-        <div>
-            <h1>Category</h1>
-            <ul>
+        <div className="category-container">
+            <h1>{displayCategory} Recipes</h1>
+            <div className="card-container">
                 {meals.map((meal, key) => (
-                 
-                        <div key={key} className="card" onClick={() => showMeal(parseInt(meal.idMeal))}>
-                            <h3>{meal.strMeal}</h3>
-                            <img src={meal.strMealThumb} alt={meal.strMeal}></img>
-                        </div>
-                  
+                    <div key={key} className="card" onClick={() => showMeal(parseInt(meal.idMeal))}>
+                        <img className="card-image" src={meal.strMealThumb} alt={meal.strMeal}></img>
+                        <h3 className="card-name">{meal.strMeal}</h3>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

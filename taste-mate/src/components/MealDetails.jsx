@@ -23,34 +23,34 @@ const MealDetails = () => {
         <div>
             <div className="meal-details-container">
                 <div className="meal-details-header">
-                    <img src={meal.strMealThumb}/>
+                    <img className="meal-details-image" src={meal.strMealThumb}/>
                     <h1>{meal.strMeal}</h1>
                 </div>
                 <div className="meal-details-body">
                     <div className="ingredients-container">
                         <h2>Ingredients</h2>
                         <div className="ingredients-list">
-                            {/* {Object.keys(meal).map(key => {
+                            {Object.keys(meal).map(key => {
                                 if (key.startsWith('strIngredient') && meal[key]) {
                                     const measureKey = `strMeasure${key.slice(13)}`
                                     return (
                                         <div key={key} className="ingredient-item">
-                                            <span>{meal[key]}</span>
-                                            <span>{meal[measureKey]}</span>
+                                            <h4>{meal[measureKey]} {meal[key]}</h4>
+                                            
                                         </div>
                                     )
                                 }
                                 return null
-                            })} */}
+                            })}
                         </div>
                     </div>
-                    <div className="instructions">
+                    <div className="instructions-container">
                         <h2>Instructions</h2>
-                        <ul className="instruction-list">
-                            {/* {meal.strInstructions.split('\r\n').map((step, index) => (
-                                <li key={index}>{step}</li>
-                            ))} */}
-                        </ul>
+                        <div className="instruction-list">
+                            {meal.strInstructions.split('\r\n').map((step, index) => (
+                                <h4 key={index}>{`${index + 1}. ${step}`}</h4>
+                            ))}
+                        </div>
                     </div>
                     <div className="video"></div>
                 </div>

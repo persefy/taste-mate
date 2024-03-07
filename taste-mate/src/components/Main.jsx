@@ -26,7 +26,7 @@ export default function Main () {
 
 
     return (
-        <div>
+        <div className="Main">
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route exact path='/category/:category' element={<Category/>}/>

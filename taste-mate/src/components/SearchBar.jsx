@@ -50,10 +50,10 @@ export default function SearchBar () {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" id="searchQuery"
+                <input placeholder="What are we cookin?" type="text" id="searchQuery"
                         onChange={handleChange}
                         value={formState.searchQuery}/>
-                <button type="submit" onClick={()=> {
+                <button className="search-button" type="submit" onClick={()=> {
                     setSearchMealQuery(formState.searchQuery)
                 }}>Search</button>
             </form>

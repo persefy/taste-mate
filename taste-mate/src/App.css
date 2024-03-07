@@ -1,42 +1,192 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+}
+.App {
+  font-family:  Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  margin:  auto;
+  
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.Header {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 1000vw;
+  height: 120px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    .name-searchbar-container {
+      /* background-color: green; */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 70vw;
+      height: 65px;
+      margin-top: -5px;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 700;
+      font-size: 2.2em;
+    }
+    #searchQuery {
+      box-shadow: inset 3px 3px 5px 0px rgba(0, 0, 0, 0.25);
+      height: 25px;
+      width: 25vw;
+      border: none;
+      background-color: rgb(242, 242, 241);
+      box-sizing: border-box;
+    }
+    #searchQuery::placeholder {
+      font-size: 1.1em;
+      padding-left: 10px; 
+      transform: translateY(2px);
+    }
+    #searchQuery:hover{
+      border: 1px solid black;
+    }
+    .search-button {
+      background-color: #e33d26;
+      color:white;
+      font-weight: 700;
+      border: none;
+      height: 25px;
+      border-radius: 5px;
+      margin-left: 10px;
+      
+    }
+    .saved-recipes {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .bookmark-icon, .user-icon {
+      width: 25px;
+    }
+    .nav-menu{
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: -20px;
+      /* background-color: blue; */
+    }
+
+    .nav-menu > a:first-child {
+      font-weight: 700;
+      font-size: 1.5em;
+    }
+    
+    .nav-menu .recipes-link {
+      font-weight: 700;
+      font-size: 1.5em;
+      
+      padding-bottom: 14px;
+    }
+    .submenu {
+      margin-top: 14px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 40vw;
+      padding-left: 2vw;
+      padding-right: 2vw;
+    
+      border-radius: 5px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    }
+    .submenu-row{
+      text-decoration: none;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .submenu-row h2 {
+      font-size: 1.2em;
+      font-weight: 700;
+    }
+    .submenu-row h3 {
+      font-size: 1em;
+      font-weight: 400;
+  
+    }
+    
+
+
+    .category-container {
+
+    }
+
+    .card-container {
+     
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      
+      width: 250px; 
+      height: 250px;
+      margin-bottom: 30px;
+      margin-right: 10px;
+      margin-left: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.25);
+      background-color: white;
+    }
+
+    .card-image {
+      width: 250px;
+      height: 150px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .card-name {
+      flex: 1; /* Take up remaining space vertically */
+      display: flex; /* Use flexbox for centering */
+       /* Center horizontally */
+      /* Center vertically */
+      font-size: 1.2em;
+      font-weight: 700;
+     
+      padding-left: 15px;
+    }
+
+/* .meal-details-container {
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  
+
+} */
+
+/* .meal-details-header {
+  display: flex;
+  flex-direction: column;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+.meal-details-image {
+  width:100vw;
+  height: 35vh;
+  object-fit: cover;
+} 
